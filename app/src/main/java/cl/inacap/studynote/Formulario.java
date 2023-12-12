@@ -109,11 +109,29 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         coleccionEntradas.add(entrada).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
-                //En caso de exito en el registro mostramos mensaje al usuario
-                Toast.makeText(Formulario.this, "Registro efectuado correctamente", Toast.LENGTH_LONG).show();
-                //Realizamos intento
-                Intent intento = new Intent(Formulario.this, MainActivity.class);
-                startActivity(intento);
+                //En caso de éxito en el registro, obtenemos el ID asignado por Firestore
+                String idDocumento = documentReference.getId();
+                //Actualizamos el campo id de la entrada con el ID asignado
+                entrada.setId(idDocumento);
+                //Actualizamos la entrada en Firestore con el ID asignado
+                documentReference.update("id", idDocumento)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                // Mostramos mensaje al usuario
+                                Toast.makeText(Formulario.this, "Registro efectuado correctamente", Toast.LENGTH_LONG).show();
+
+                                // Realizamos intento para que vuelva a la pantalla principal
+                                Intent intento = new Intent(Formulario.this, MainActivity.class);
+                                startActivity(intento);
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(Formulario.this, "Error al actualizar ID en Firestore", Toast.LENGTH_LONG).show();
+                            }
+                        });
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
