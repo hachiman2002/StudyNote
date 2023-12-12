@@ -46,6 +46,32 @@
         android:layout_height="80dp"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"></ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btn_editar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Editar"
+            android:backgroundTint="#41914d"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btn_eliminar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Eliminar"
+            android:backgroundTint="#41914d"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -59,7 +85,11 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="300dp"
         android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp" />
+        android:dividerHeight="1dp"></ListView>
+
+
+
+
 </LinearLayout>

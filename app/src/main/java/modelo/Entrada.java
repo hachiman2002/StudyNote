@@ -54,4 +54,19 @@ public class Entrada implements Serializable {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
+
+    //metodo tostring para oobtener una representacion en cadena de la entrada
+    @Override
+    public String toString() {
+        return "Nombre: " + nombre +
+                "\nRamo: " + ramo +
+                //agregar validacion a la fecha para cuando sea nula agregar N/A para que no se me caiga la aplicacion
+                "\nFecha: " +  (fecha != null ? fecha.toString() : "N/A") +
+                "\nCategoría: " + categoria;
+    }
+
+    // Aqui agrgue un constructor sin argumentos porque me lo pedia firebase
+    public Entrada() {
+        //constructor vacío para Firebase
+    }
 }
