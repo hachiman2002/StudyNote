@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "566945764626",
+    "project_id": "studynote-88996",
+    "storage_bucket": "studynote-88996.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566945764626:android:abaac15343e8c7f6d38fcb",
+        "android_client_info": {
+          "package_name": "cl.inacap.studynote"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkolp8SgRnX6GEkygcJ-ArLSExVrOzgns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
