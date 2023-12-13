@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormularioEditar"
+    android:padding="20dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="StudyNote"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#41914d"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Formulario Edición"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"></TextView>
+
+    <ImageView
+        android:src="@drawable/formulario"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"></ImageView>
+
+    <EditText
+        android:id="@+id/edt_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Nombre"></EditText>
+
+    <EditText
+        android:id="@+id/edt_ramo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Ramo"></EditText>
+
+    <EditText
+        android:id="@+id/edt_fecha_entrega"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:layout_marginTop="10dp"
+        android:hint="Fecha entrega"></EditText>
+
+    <Spinner
+        android:id="@+id/spn_prioridad"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <Button
+        android:id="@+id/btn_editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#41914d"
+        android:text="E D I T A R   T A R E A"
+        android:layout_marginTop="100dp"
+        android:textSize="22dp"></Button>
+
+
+</LinearLayout>

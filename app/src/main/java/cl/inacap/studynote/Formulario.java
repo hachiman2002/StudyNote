@@ -62,7 +62,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
 
     private void vincularElementos() {
         edtNombre = (EditText) findViewById(R.id.edt_nombre);
-        edtRamo = (EditText) findViewById(R.id.edt_nombre);
+        edtRamo = (EditText) findViewById(R.id.edt_ramo);
         edtFechaEntrega = (EditText) findViewById(R.id.edt_fecha_entrega);
         btnAgregar = (Button) findViewById(R.id.btn_agregar);
         spnPrioridad = (Spinner) findViewById(R.id.spn_prioridad);

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.StudyNote"
         tools:targetApi="31">
         <activity
+            android:name=".FormularioEditar"
+            android:exported="false" />
+        <activity
             android:name=".Formulario"
             android:exported="false" />
         <activity

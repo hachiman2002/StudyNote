@@ -86,10 +86,8 @@
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp"></ListView>
-
-
-
+        android:divider="@android:color/white"
+        android:dividerHeight="5dp"
+        android:background="#CDE0CD"></ListView>
 
 </LinearLayout>

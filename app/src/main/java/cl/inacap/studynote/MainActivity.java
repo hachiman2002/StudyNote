@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -37,14 +38,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Vincular elementos
         vincularElementos();
 
-        //Activar Listener
-        activarListener();
+
         entradasList = new ArrayList<>();
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, entradasList);
         listView.setAdapter(adapter);
         // Configurar el listener para clics en elementos de la lista
         listView.setOnItemClickListener(this);
         obtenerDatosFirebase();
+
+        //Activar Listener
+        activarListener();
     }
 
     //metodo para obtener datos de Firebase y actualizar la lista
@@ -97,7 +100,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         //Editar
         if (view.getId() == R.id.btn_editar){
-
+            if (entradaSeleccionada != null) {
+                Intent intent = new Intent(MainActivity.this, FormularioEditar.class);
+                intent.putExtra("entradaSeleccionada", entradaSeleccionada);
+                startActivity(intent);
+            } else {
+                Log.e("MainActivity", "Error: No hay entrada seleccionada para editar");
+            }
         }
         // Eliminar
         if (view.getId() == R.id.btn_eliminar){
